@@ -1,0 +1,45 @@
+# Trabalho de Avaliação: Kubernetes (K8s)
+
+Este repositório contém os materiais e a apresentação desenvolvidos para a avaliação acadêmica sobre **Kubernetes**, abordando desde os conceitos fundamentais até a sua integração com práticas de DevOps e aplicações práticas.
+
+---
+
+## 👥 Integrantes do Grupo
+
+- Isadora Correa
+- Maria Júlia Loureiro
+- Rafaela Riganti
+- Ronaldo Junior
+- Sophia Marcelino
+
+---
+
+## 🐳 O que é o Kubernetes?
+
+O **Kubernetes (K8s)** é uma plataforma open-source de orquestração de contêineres criada originalmente pelo Google e mantida atualmente pela CNCF (*Cloud Native Computing Foundation*). 
+
+O nome "Kubernetes" tem origem no grego e significa "timoneiro" ou "piloto do navio". Na prática, ele atua como um "piloto automático" para gerenciar, automatizar e escalar aplicações empacotadas em contêineres (como o Docker) em um cluster de máquinas.
+
+### Principais Problemas que Resolve:
+- **Escalonamento Manual:** Automatiza o aumento ou a redução do número de réplicas de acordo com a demanda de tráfego.
+- **Autorrecuperação (*Self-Healing*):** Detecta falhas em contêineres, reiniciando-os ou substituindo-os automaticamente.
+- **Distribuição de Carga:** Realiza o balanceamento de tráfego de forma eficiente entre as réplicas.
+- **Atualizações Sem Downtime:** Executa atualizações contínuas (*rolling updates*) sem interromper o serviço.
+
+---
+
+## ⚙️ Arquitetura Básica
+
+Um cluster de Kubernetes é dividido em duas partes principais:
+1. **Control Plane (O Cérebro):** Gerencia o estado do cluster, toma decisões de agendamento e responde a eventos (contém componentes como *API Server*, *etcd*, *Scheduler* e *Controller Manager*).
+2. **Worker Nodes (Os Nós de Trabalho):** Máquinas onde as aplicações de fato rodam dentro de unidades chamadas *Pods* (contendo o *kubelet*, *kube-proxy* e o *Container Runtime*).
+
+---
+
+## 🚀 Integração com DevOps
+
+O Kubernetes se encaixa principalmente na segunda metade do ciclo de vida DevOps, focando nas etapas de **Deploy, Operação e Monitoramento**:
+1. **Conteinerizar:** Empacotar a aplicação com Docker.
+2. **Criar Manifestos:** Escrever arquivos YAML de *Deployment* e *Service*.
+3. **Plugar no CI/CD:** Automatizar o build e o *apply* via pipelines (ex.: GitHub Actions ou GitLab CI)..
+5. **Monitorar:** Acompanhar métricas de saúde com ferramentas como Prometheus e Grafana.
